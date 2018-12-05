@@ -18,10 +18,11 @@ namespace SimpleCalculator
         {
             double num;
 
-            if (double.TryParse(op, out num) || op.Length > 1)
+            if (double.TryParse(op, out num))
             {
                 throw new NotSupportedException("Specified operation is not supported.");
             }
+
             return op;
         }
     }

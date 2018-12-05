@@ -7,20 +7,31 @@ namespace SimpleCalculator
         public static double Calculate(double firstNum, double secondNum, string op)
         {
             double result;
-            switch (op)
+            switch (op.ToLower())
             {
                 case "+":
+                case "add":
                     result = firstNum + secondNum;
                     break;
                 case "-":
-                    result = firstNum - secondNum;
+                case "subtract":
+                    if (firstNum < secondNum)
+                        result = secondNum - firstNum;
+                    else
+                        result = firstNum - secondNum;
                     break;
                 case "*":
+                case "multiply":
                     result = firstNum * secondNum;
                     break;
                 case "/":
-                    result = firstNum / secondNum;
+                case "divide":
+                    if (firstNum < secondNum)
+                        result = secondNum / firstNum;
+                    else
+                        result = firstNum / secondNum;
                     break;
+
                 default:
                     throw new NotSupportedException("Specified operation is not supported");
             }

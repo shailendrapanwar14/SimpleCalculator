@@ -63,7 +63,6 @@ namespace SimpleCalculator.Tests.Unit
         }
 
         [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
         public void ConfirmAddNamedOperationIsNotSupported()
         {
             string op = "add";
@@ -71,7 +70,6 @@ namespace SimpleCalculator.Tests.Unit
         }
 
         [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
         public void ConfirmSubtractNamedOperationIsNotSupported()
         {
             string op = "subtract";
@@ -79,7 +77,6 @@ namespace SimpleCalculator.Tests.Unit
         }
 
         [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
         public void ConfirmMultiplyNamedOperationIsNotSupported()
         {
             string op = "multiply";
@@ -87,7 +84,6 @@ namespace SimpleCalculator.Tests.Unit
         }
 
         [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
         public void ConfirmDivideNamedOperationIsNotSupported()
         {
             string op = "divide";
